@@ -4,3 +4,4 @@ node_modules
 assets
 /src/pdfDataInsertion
 package-lock.json
+.env
