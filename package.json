@@ -1,0 +1,48 @@
+{
+  "name": "kt-assistant-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "start:prod": "NODE_ENV=production && node dist/app.js",
+    "migrate:twitter": "ts-node src/scripts/migrateTwitterFields.ts",
+    "reset-twitter": "ts-node src/scripts/resetTwitterData.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.12.2",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.3",
+    "express": "^5.1.0",
+    "googleapis": "^150.0.1",
+    "http-status": "^2.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "morgan": "^1.10.0",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.10",
+    "openai": "^4.103.0",
+    "telegraf": "^4.16.3",
+    "xlsx": "^0.18.5",
+    "zod": "^3.25.32"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.16.5",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
