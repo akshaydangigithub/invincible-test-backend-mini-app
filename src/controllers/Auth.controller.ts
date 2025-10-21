@@ -17,7 +17,12 @@ class AuthController {
       /^@/,
       ""
     );
-    const backendUrl = process.env.BACKEND_URL || "";
+    const rawBackendUrl = (process.env.BACKEND_URL || "").trim();
+    const backendUrl = rawBackendUrl
+      ? rawBackendUrl.match(/^https?:\/\//i)
+        ? rawBackendUrl.replace(/\/+$/, "")
+        : `https://${rawBackendUrl.replace(/\/+$/, "")}`
+      : "";
 
     const html = `<!DOCTYPE html>
 <html>
