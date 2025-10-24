@@ -38,30 +38,9 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-// CORS configuration
-const allowedOrigins = [
-  // "http://localhost:5173",
-  // "http://localhost:8181",
-  "https://stirring-gelato-64f110.netlify.app",
-  "http://3.110.133.215",
-  "https://3.110.133.215",
-  "https://13.233.107.247",
-  "https://975xnxww-5173.inc1.devtunnels.ms",
-  "https://cfqn0whl-5173.inc1.devtunnels.ms",
-  "https://minigame.invincibleread.com",
-  "https://c5z23s0m-5173.inc1.devtunnels.ms",
-  // "https://dxtdzp1m-5173.inc1.devtunnels.ms",
-  // "https://dxtdzp1m-8181.inc1.devtunnels.ms",
-  // "https://7tvmjdm0-5173.inc1.devtunnels.ms",
-  // "https://7tvmjdm0-8181.inc1.devtunnels.ms",
-  "https://invincibleread.com",
-  "https://api-miniapp.invincibleread.com",
-  "*",
-];
-
 const corsOptions = {
-  origin: allowedOrigins,
-  credentials: true,
+  origin: true,           
+  credentials: true,     
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: ["Content-Type", "Authorization"],
 };
